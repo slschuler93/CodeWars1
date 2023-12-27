@@ -1,0 +1,197 @@
+//keep up the hoop 8 kyu
+function hoopCount (n) {
+   if (n >= 10){
+     return "Great, now move on to tricks";
+   } else return "Keep at it until you get it"
+}
+
+//returning strings 8 kyu
+function greet(name){
+  return `Hello, ${name} how are you doing today?`
+}
+
+//convert a boolean to string 8 kyu
+function booleanToString(b){
+  return b.toString(b)
+}
+
+//is he gonna survive? 8 kyu
+function hero(bullets, dragons){
+ return bullets >= 2 * dragons
+}
+
+//all star code challenge #18 8 kyu
+function strCount(str, letter){  
+  let arr = str.split("");
+  let finalArr = arr.filter((char) => letter === char);
+  return finalArr.length;
+}
+
+//fizzbuzz kyu 7
+// Return an array
+function fizzbuzz(n)
+{
+	const returnedArr = [];
+	for (let i = 1; i <= n; i++) {
+		let str = "";
+		if (i % 3 === 0) {
+			str = str + "Fizz";
+		};
+		if (i % 5 === 0) {
+			str = str + "Buzz";
+		};
+		if (str.length === 0) {
+			returnedArr.push(i);
+		} else {
+			returnedArr.push(str);
+		};
+	};
+	return returnedArr;
+};
+
+//square(n) sum 8 kyu
+function squareSum(numbers){
+  let sumOfNumbers = 0
+  let i = 0
+  while (i < numbers.length){
+    sumOfNumbers += (numbers[i] ** 2)
+    i++
+    }
+  return sumOfNumbers
+  }
+
+//even or odd 8 kyu
+function evenOrOdd(number) {
+     if (number % 2 === 0) {
+        return "Even";
+    } else {
+        return "Odd";
+    }
+}
+
+//Training JS #18: Methods of String object--concat() split() and its good friend join() 8 kyu
+function splitAndMerge(string, separator) {
+  return string.split('')
+        .join(separator + '')
+        .split(separator + ' ' + separator)
+        .join(' ');
+}
+
+//sum of multiples 8 kyu
+function sumMul(n,m){
+let r = 0;
+  for(let i = 1; i*n<m; i++){
+    r+=i*n
+  }
+  return r > 0 ? r : 'INVALID'
+}
+
+//add length 8 kyu
+function addLength(str){
+  const words = str.split(" ");
+  return words.map(str => `${str} ${str.length}`);
+}
+function nameWithIndex(str){
+  const words = str.split(" ");
+  return words.map((string, index) => `${index}. ${string}`);
+}
+
+//up and down the string grows 8 kyu
+const STRANGE_STRING = "ßå"
+
+//third angle of a triangle 8 kyu
+function otherAngle(a, b) {
+  return 180 - (a + b);
+}
+
+//no zeros for heroes 8 kyu
+function noBoringZeros(n) {
+  while ((Math.abs(n) > 9) && (n % 10 === 0)){
+    n/= 10;
+  }
+  return n;
+}
+
+//opposite number 8 kyu
+function opposite(number) {
+let oppNum = 0 - number
+  return oppNum
+}
+
+//calculate bmi 8 kyu
+function bmi(weight, height) {
+let bmi = weight / (height ** 2)
+  if (bmi <= 18.5){
+    return "Underweight"
+  }
+  else if (bmi <= 25.0){
+    return "Normal"
+  }
+  else if (bmi <= 30.0){
+    return "Overweight"
+  }
+  else if (bmi > 30){
+    return "Obese"
+  }
+}
+
+//Determine offspring sex based on genes XX and XY chromosomes 8 kyu
+function chromosomeCheck(sperm) {
+  if (sperm === 'XX'){
+    return "Congratulations! You\'re going to have a daughter."}
+  else if (sperm === 'XY'){
+    return "Congratulations! You\'re going to have a son."}
+  else if (sperm === 'YX'){
+    return "Congratulations! You\'re going to have a son."
+  }
+}
+
+//drink about 8 kyu
+function peopleWithAgeDrink(old) {
+  if (old < 14){
+    return "drink toddy";
+  }
+  else if ((old < 18) && (old >= 14)){
+    return "drink coke";
+  }
+  else if ((old < 21) && (old >= 18)){
+    return "drink beer";
+  }
+  else if (old >= 21)
+  return "drink whisky";
+};
+
+//Training JS #1: create your first JS function and print "Hello World!" 8 kyu
+function helloWorld(){
+  let str = "Hello World!"
+  console.log(str)
+}
+
+//convert a string to an array 8 kyu
+function stringToArray(string){
+
+	return string.split(' ')
+
+}
+
+//return negative 8 kyu
+function makeNegative(num) {
+  if (num<=0){
+    return num
+    }else return num - (num * 2)
+}
+
+//make uppercase 8 kyu
+function makeUpperCase(str){
+  return str.toUpperCase()
+}
+
+//calculate average 8 kyu
+function findAverage(array) {
+  
+  if(array.length>0){
+  return (array.reduce((acc, cv) => acc + cv,0) / array.length)
+    }else{
+      return 0
+    }
+}
